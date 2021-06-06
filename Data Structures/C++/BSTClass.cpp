@@ -197,7 +197,7 @@ int getChoice() {
 		std::cin.clear();
 		std::cin.ignore(INT_MAX, '\n');
 		//Get the Input from User again
-		std::cout << "Choose a Valid Option" << endl;
+		std::cout << "Enter a Valid Input: ";
 		std::cin >> choice;
 	}
 	//Clear the Stream of any Bad Input
@@ -258,7 +258,7 @@ void printMenu(BST bst) {
 				std::this_thread::sleep_for(std::chrono::milliseconds(200));
 				break;
 			default:
-				std::cout << "Choose a Valid Option" << endl << "\n";
+				std::cout << "Choose a Valid Option!!" << endl << "\n";
 				break;
 		}
 	}
@@ -288,7 +288,8 @@ void mainMenu() {
 			case 1:
 				std::cout << "Option 1 selected" << endl;
 				std::cout << "Enter a value to Insert: ";
-				std::cin >> value;
+				//std::cin >> value;
+				value = getChoice();
 				std::cout << "\n";
 				//Store the value into the Node
 				node->value = value;
@@ -301,7 +302,8 @@ void mainMenu() {
 			case 2:
 				std::cout << "Option 2 selected" << endl;
 				std::cout << "Enter a value to Search: ";
-				std::cin >> value;
+				//std::cin >> value;
+				value = getChoice();
 				std::cout << "\n";
 				std::cout << "Searching..." << endl << "Looking for the value "<< value << " in the BST" << endl;
 				std::this_thread::sleep_for(std::chrono::milliseconds(200));
@@ -316,7 +318,8 @@ void mainMenu() {
 			case 3:
 				std::cout << "Option 3 selected" << endl;
 				std::cout << "Enter a value to Delete: ";
-				std::cin >> value;
+				//std::cin >> value;
+				value = getChoice();
 				std::cout << "\n";
 				node = bst.search(value);
 				if(node != NULL) {
@@ -352,7 +355,7 @@ void mainMenu() {
 				std::cout << "Exiting...(The Application to be Executed)" << endl << "\n";
 				exit(0);
 			default:
-				std::cout << "Choose a Valid Option" << endl << "\n";
+				std::cout << "Choose a Valid Option!!" << endl << "\n";
 		}
 	}
 }
