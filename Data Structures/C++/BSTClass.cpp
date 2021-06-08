@@ -7,8 +7,8 @@ using namespace std;
 
 class Node {
 	public:
-	int value;
-	Node *left, *right;
+		int value;
+		Node *left, *right;
 
 	Node() {
 		value = 0;
@@ -25,7 +25,7 @@ class Node {
 
 class BST {
 	public:
-	Node *root;
+		Node *root;
 
 	BST() {
 		root = NULL;
