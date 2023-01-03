@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <thread>
 #include <chrono>
+#include <climits>
 #define GAP 10
 using namespace std;
 
@@ -359,6 +360,7 @@ void mainMenu() {
 		}
 	}
 }
+
 int main()
 { 
 	mainMenu();	
