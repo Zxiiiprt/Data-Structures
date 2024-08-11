@@ -3,11 +3,11 @@
 #define MAX_SIZE 256
 
 int stack[MAX_SIZE];
-//int top = -1; //Empty stack
+// int top = -1; //Empty stack
 
 void push(int *stack, int top, int val)
 {
-    if(top == MAX_SIZE-1) //We have a Stack Overflow
+    if (top == MAX_SIZE - 1) // We have a Stack Overflow
     {
         fprintf(stderr, "Error: Stack Overflow\n");
         return;
@@ -18,7 +18,7 @@ void push(int *stack, int top, int val)
 
 void pop(int *stack, int top)
 {
-    if(top == -1)
+    if (top == -1)
     {
         fprintf(stderr, "Error: Stack is already Empty\n");
         return;

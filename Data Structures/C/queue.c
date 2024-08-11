@@ -5,11 +5,11 @@
 int queue[SIZE];
 int count = 0;
 
-void insert(int val)
+void insert_queue(int val)
 {
-    if(count == SIZE)
+    if (count == SIZE)
     {
-        //We have reached the end of the queue
+        // We have reached the end of the queue
         fprintf(stderr, "No more space in the queue\n");
         return;
     }
@@ -17,17 +17,17 @@ void insert(int val)
     count++;
 }
 
-void remove()
+void remove_queue()
 {
-    if(!count)
+    if (!count)
     {
-        //We have nothing in the queue
+        // We have nothing in the queue
         fprintf(stderr, "No elements in the queue\n");
         return;
     }
-    for(int i = 0; i < count-1; i++)
+    for (int i = 0; i < count - 1; i++)
     {
-        queue[i] = queue[i+1];
+        queue[i] = queue[i + 1];
     }
     count--;
 }

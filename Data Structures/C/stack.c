@@ -7,7 +7,7 @@ int count = 0;
 
 void push(int val)
 {
-    if(count == SIZE)
+    if (count == SIZE)
     {
         fprintf(stderr, "No space in the stack\n");
         return;
@@ -18,7 +18,7 @@ void push(int val)
 
 void pop()
 {
-    if(!count)
+    if (!count)
     {
         fprintf(stderr, "Stack is empty\n");
         return;

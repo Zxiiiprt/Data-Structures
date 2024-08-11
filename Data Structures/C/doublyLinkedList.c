@@ -11,7 +11,7 @@ typedef struct node
 void init(node_t **head, node_t **tail, int val)
 {
     node_t *new_node = malloc(sizeof(node_t));
-    if(new_node == NULL)
+    if (new_node == NULL)
     {
         exit(1);
         return;
@@ -19,7 +19,7 @@ void init(node_t **head, node_t **tail, int val)
     new_node->val = val;
     new_node->prev = NULL;
     new_node->next = NULL;
-    
+
     *head = new_node;
     *tail = new_node;
 }
@@ -27,17 +27,17 @@ void init(node_t **head, node_t **tail, int val)
 void insert_beginning(node_t **head, int val)
 {
     node_t *new_node = malloc(sizeof(node_t));
-    if(new_node == NULL)
+    if (new_node == NULL)
     {
         fprintf(stderr, "Failed to malloc\n");
         exit(1);
         return;
     }
-    
+
     new_node->val = val;
     new_node->prev = NULL;
     new_node->next = *head;
-    if(*head != NULL)
+    if (*head != NULL)
     {
         (*head)->prev = new_node;
     }
@@ -46,9 +46,10 @@ void insert_beginning(node_t **head, int val)
 
 void deallocate_list(node_t **head, node_t **tail)
 {
-    if(*head == NULL) return;
+    if (*head == NULL)
+        return;
     node_t *curr = *head;
-    while(curr->next != NULL)
+    while (curr->next != NULL)
     {
         curr = curr->next;
         free(curr->prev);
@@ -61,8 +62,8 @@ void deallocate_list(node_t **head, node_t **tail)
 void reverse_list(node_t **head, node_t **tail)
 {
     node_t *curr = *head;
-    
-    while(curr != NULL)
+
+    while (curr != NULL)
     {
         node_t *next = curr->next;
         curr->next = curr->prev;
